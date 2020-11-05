@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Random Numbers</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //var userchoice prompt
+
+      //possible choices p,r,s
+      var choices = ["p", "r", "s"];
+
+      //count for win-loses
+      wins = 0;
+      loses = 0;
+      ties = 0;
+      //AIchoice random
+      for (i = 0; i < 5; i++) {
+        AIchoice = choices[Math.floor(Math.random() * choices.length)];
+        console.log(AIchoice);
+
+        //compare user vs AI
+        var userChoice = prompt("Please select r, p or s?");
+        userChoice = userChoice.toLowerCase();
+
+        alert("The computer has chosen " + AIchoice);
+        if (
+          (userChoice === "r" && AIchoice === "s") ||
+          (userChoice === "s" && AIchoice === "p") ||
+          (userChoice === "p" && AIchoice === "r")
+        ) {
+          wins++;
+          alert("you have won " + wins + "  times");
+        } else if (userChoice === AIchoice) {
+          ties++;
+          alert("You have tied  " + ties + "  times");
+        } else {
+          loses++;
+          alert("You have lost " + loses + " times");
+        }
+      }
+      //if user = rock if AI=rock => tie
+      //victories increment
+    </script>
+  </body>
+</html>
