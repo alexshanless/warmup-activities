@@ -2,11 +2,14 @@
 
 // Must be uppercase and separated with a period (".")
 
-// var getInitials = function (name) {
-//   // your code here
-// };
+var getInitials = function (name) {
+  var newArr = name.split(" ");
+  var firstInitial = newArr[0][0];
+  var secondinitial = newArr[1][0];
+  var newName = `${firstInitial}.${secondinitial}`;
 
-// console.log(getInitials("harry potter"));
+  return newName.toUpperCase();
+};
 
 // Given an array of numbers, add together the positive nums & return the sum
 
@@ -92,3 +95,22 @@ var countVowels = function (s) {
   }
   return counter;
 };
+
+//Array to object
+const tweets = [
+  { day: "Monday", text: "Im tired" },
+  { day: "Monday", text: "Need Coffee" },
+  { day: "Tuesday", text: "Feeling better" },
+  { day: "Friday", text: "Ready to party" },
+  { day: "Friday", text: "Lost my phone..." },
+];
+
+const calendar = {};
+for (let tweet of tweets) {
+  if (calendar[tweet.day]) {
+    calendar[tweet.day].push(tweet.text);
+  } else {
+    calendar[tweet.day] = [tweet.text];
+  }
+}
+console.log(calendar);
