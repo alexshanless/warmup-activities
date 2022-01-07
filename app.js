@@ -1,7 +1,7 @@
 //Numbers
-const num = 54; //float
-const float = 43.43; //float
-const power = 10e3;
+// const num = 54; //float
+// const float = 43.43; //float
+// const power = 10e3;
 
 /*(Number object .
 MAX_SAFE_INTEGER
@@ -39,7 +39,32 @@ random()
 */
 
 //Examples
-function randNum(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
+// function randNum(min, max) {
+//   return Math.floor(Math.random() * (max - min + 1) + min);
+// }
+// console.log(randNum());
+
+//Strings
+/*const name  = 'Alex'
+toUpperCase()
+toLowerCase()
+charAt(2)
+indexOf('le')
+startsWith()
+endsWith()
+repeat(3)
+trim()
+trimLeft()
+trimRight()
+*/
+
+function logPerson(s, name, age) {
+  return `${s[0]}${name}${s[1]}${age}`;
 }
-console.log(randNum());
+
+const personName = "alex";
+const personAge = 29;
+
+const output = logPerson`Name: ${personName},Age: ${personAge}`;
+
+console.log(output);
