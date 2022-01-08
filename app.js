@@ -58,13 +58,58 @@ trimLeft()
 trimRight()
 */
 
-function logPerson(s, name, age) {
-  return `${s[0]}${name}${s[1]}${age}`;
-}
+// function logPerson(s, name, age) {
+//   return `${s[0]}${name}${s[1]}${age}`;
+// }
 
-const personName = "alex";
-const personAge = 29;
+// const personName = "alex";
+// const personAge = 29;
 
-const output = logPerson`Name: ${personName},Age: ${personAge}`;
+// const output = logPerson`Name: ${personName},Age: ${personAge}`;
 
-console.log(output);
+// console.log(output);
+
+//Functions
+//Function Declaration
+//Function Expression
+// const greet2 = function (name) {
+//   console.log("hi, " + name);
+// };
+
+/*Anonim functions
+setInterval(function() {
+  console.log(++counter)
+},1000)
+*/
+
+/* Arrow functions
+
+*/
+// const arrow = (name) => {
+//   console.log("hi, " + name);
+// };
+
+//Default parameters
+// const sum = (a, b = 0) => a + b;
+
+// function sumAll(...all) {
+//   let result = 0;
+//   for (let num of all) {
+//     result += num;
+//   }
+//   return result;
+// }
+
+// const res = sumAll(1, 2, 3, 4);
+// console.log(res);
+
+// function createMember(name) {
+//   return function (lastName) {
+//     console.log(name + lastName);
+//   };
+// }
+
+// const loginWithLastName = createMember("Alex");
+// console.log(loginWithLastName("Shan"));
+
+//Arrays
