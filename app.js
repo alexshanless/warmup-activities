@@ -3,7 +3,7 @@
 // const float = 43.43; //float
 // const power = 10e3;
 
-/*(Number object .
+/*Number object .
 MAX_SAFE_INTEGER
 Math.pow()
 MIN_SAFE_INTEGER
@@ -113,3 +113,36 @@ setInterval(function() {
 // console.log(loginWithLastName("Shan"));
 
 //Arrays
+/* push()
+unshift()
+shift()
+pop()
+reverse() 
+find()
+includes()
+maps()
+filter()
+*/
+
+// cars = ["Ford", "Fiat", "Mazda"];
+
+// const upperCars = cars.map((car) => {
+//   return car.toUpperCase();
+// });
+
+// console.log(upperCars);
+
+// const people = [
+//   { name: "Jack", budget: 2340 },
+//   { name: "Joe", budget: 4420 },
+//   { name: "Glen", budget: 1340 },
+// ];
+
+// const allBudget = people
+//   .filter((person) => person.budget > 2000)
+//   .reduce((acc, person) => {
+//     acc += person.budget;
+//     return acc;
+//   }, 0);
+
+// console.log(allBudget);
