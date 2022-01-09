@@ -146,3 +146,57 @@ filter()
 //   }, 0);
 
 // console.log(allBudget);
+
+//Objects
+
+/*
+
+*/
+// const person = {
+//   name: "Alex",
+//   age: 29,
+//   isProgramer: true,
+//   greet() {
+//     console.log("greetings");
+//   },
+//   // complex_key: "Complex value",
+//   // ["key_" + (1 + 3)]: "Computed key",
+// };
+
+// const { name, age } = person;
+
+// // Object.keys(person).forEach((key) => {
+// //   console.log("key: ", key);
+// //   console.log("value: ", person[key]);
+// // });
+
+// const logger = {
+//   keys() {
+//     console.log(Object.keys(this));
+//   },
+//   keysAndValues() {
+//     Object.keys(this).forEach((key) => {
+//       console.log(`"{key}":${this[key]}`);
+//     });
+//   },
+
+//   withParams(top = false, between = false, bottom = false) {
+//     if (top) {
+//       console.log("------Start-----");
+//     }
+//     Object.keys(this).forEach((key, index, array) => {
+//       console.log(`"${key}":${this[key]}`);
+//       if (between && index !== array.length - 1) {
+//         console.log("-------------");
+//       }
+//     });
+//     if (bottom) {
+//       console.log("------End-----");
+//     }
+//   },
+// };
+
+// // const bound = logger.keys.bind(person);
+// // bound();
+// // logger.keys.call(person);
+// logger.withParams.call(person, true, true, true);
