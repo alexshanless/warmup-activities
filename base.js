@@ -210,33 +210,39 @@ filter()
 //   console.log("2 secs");
 // }, 2000);
 
-const delay = (wait = 1000) => {
-  const promise = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve();
-    }, wait);
-  });
-  return promise;
-};
+// const delay = (wait = 1000) => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve();
+//     }, wait);
+//   });
+// };
 
-// delay(2500)
-//   .then(() => {
-//     console.log("After 2 seconds");
-//   })
-//   .catch((err) => console.error(err))
-//   .finally(() => console.log("Finally"));
-const getData = () => new Promise((resolve) => resolve([1, 1, 2, 3, 5, 8, 13]));
+// // delay(2500)
+// //   .then(() => {
+// //     console.log("After 2 seconds");
+// //   })
+// //   .catch((err) => console.error(err))
+// //   .finally(() => console.log("Finally"));
+// const getData = () => new Promise((resolve) => resolve([1, 1, 2, 3, 5, 8, 13]));
 
-// getData().then((data) => console.log(data));
+// // getData().then((data) => console.log(data));
 
-async function asyncExample() {
-  try {
-    await delay(3000);
-    const data = await getData();
-    console.log(data);
-  } catch (e) {
-    console.log(e);
-  }
-}
+// async function asyncExample() {
+//   try {
+//     await delay(3000);
+//     const data = await getData();
+//     console.log(data);
+//   } catch (e) {
+//     console.log(e);
+//   }
+// }
 
-asyncExample();
+// asyncExample();
+
+//DOM
+//Events
+/*onClick
+addEventListener
+event.target
+*/
