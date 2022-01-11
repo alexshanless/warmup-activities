@@ -28,6 +28,29 @@ array.push(13);
 
 const obj = { a: 42 };
 obj.name = "Antoine";
-console.log(obj);
 
 //ARROW FUNC
+// function sum(a, b) {
+//   return a + b;
+// }
+
+const sum = (a, b) => a + b;
+
+//Context
+function log() {
+  console.log(this);
+}
+
+const arrowLog = () => console.log(this);
+
+const person = {
+  name: "Alex",
+  age: 29,
+  log: log,
+  arrowLog: arrowLog,
+  delayLog: function () {
+    setTimeout(() => console.log(this.name + " " + this.age), 500);
+  },
+};
+
+person.delayLog();
