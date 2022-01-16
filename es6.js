@@ -98,11 +98,26 @@ const address = {
   country: "USA",
   city: "Seattle",
   street: "Broadway",
-  concat: function () {
-    return `${this.contry}, ${this.city}, ${this.street}`;
+  toString: function () {
+    return Object.keys(this)
+      .filter((key) => key !== "toString")
+      .map((key) => console.log(this[key]));
   },
+  // concat: function () {
+  //   return `${this.contry}, ${this.city}, ${this.street}`;
+  // },
 };
 
 // const { city, country, street, concat: addressConcat } = address;
 
 const { city, ...rest } = address;
+
+console.log(address.toString());
+
+//Methods
+/*Object.is()
+.assign()
+.entries()
+.keys()
+.values()
+*/
