@@ -53,12 +53,136 @@
 // person.logInfo.call(newPers, "front", "111-111");
 // person.logInfo.apply(newPers, ["front", "111-111"]);
 
-const array = [1, 2, 3, 4, 5];
+// const array = [1, 2, 3, 4, 5];
 
-Array.prototype.multBy = function (n) {
-  return this.map(function (i) {
-    return i * n;
-  });
-};
+// Array.prototype.multBy = function (n) {
+//   return this.map(function (i) {
+//     return i * n;
+//   });
+// };
 
-console.log(array.multBy(10));
+// console.log(array.multBy(10));
+
+//!Closures
+
+// function createCalcFunction(n) {
+//   return function () {
+//     console.log(1000 * n);
+//   };
+// }
+
+// const calc = createCalcFunction(42);
+// calc();
+
+// function urlGenerator(domain) {
+//   return function (url) {
+//     return `https://${url}.${domain}`;
+//   };
+// }
+
+// const comUrl = urlGenerator("com");
+// console.log(comUrl("google"));
+
+// function bind(context, fn) {
+//   return function (...args) {
+//     fn.apply(context, args);
+//   };
+// }
+
+//Objects
+
+// const person = Object.create(
+//   {},
+//   {
+//     name: {
+//       value: "Bob",
+//     },
+//   },
+//   {
+//     age: {
+//       value: 6,
+//     },
+//   }
+// );
+
+// for (key in person) {
+//   console.log(key);
+// }
+
+//ES6 Classes
+// class Animal {
+//   static type = "ANIMAL";
+//   constructor(options) {
+//     this.name = options.name;
+//     this.age = options.age;
+//     this.hasTail = options.hasTail;
+//   }
+// }
+
+// // const animal = new Animal({
+// //   name: "animal",
+// //   age: 5,
+// //   hasTail: true,
+// // });
+
+// class Cat extends Animal {
+//   constructor(options) {
+//     super(options);
+//     this.color = options.color;
+//   }
+
+//   get ageInfo() {
+//     return this.age * 7;
+//   }
+//   set ageInfo(newAge) {
+//     this.age = newAge;
+//   }
+// }
+
+// const cat = new Cat({
+//   name: "Pushok",
+//   age: 5,
+//   hasTail: true,
+//   color: "tabi",
+// });
+// console.log(cat.ageInfo);
+
+// class Component {
+//   constructor(selector) {
+//     this.$el = document.querySelector(selector);
+//   }
+
+//   hide() {
+//     this.$el.style.display = "none";
+//   }
+//   show() {
+//     this.$el.style.display = "block";
+//   }
+// }
+
+// class Box extends Component {
+//   constructor(options) {
+//     super(options.selector);
+//     this.$el.style.width = this.$el.style.height = options.size + "px";
+//     this.$el.style.background = options.color;
+//   }
+// }
+
+// const box1 = new Box({
+//   selector: "#box1",
+//   size: 100,
+//   color: "black",
+// });
+
+// class Circle extends Box {
+//   constructor(options) {
+//     super(options);
+//     this.$el.style.borderRadius = "50%";
+//   }
+// }
+
+// const c = new Circle({
+//   selector: "#circle",
+//   size: 50,
+//   color: "green",
+// });
