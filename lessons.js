@@ -186,3 +186,34 @@
 //   size: 50,
 //   color: "green",
 // });
+
+// Async
+// console.log("start");
+
+// setTimeout(() => {
+//   console.log("timeout");
+// }, 0);
+// console.log("end");
+
+// const p = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     console.log("Preparing data");
+//     const serverData = {
+//       server: "aws",
+//       port: "2000",
+//       status: "201",
+//     };
+//     resolve(serverData);
+//   }, 2000);
+// });
+
+// p.then((data) => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       data.modified = true;
+//       resolve(data);
+//     }, 2000);
+//   }).then((clientData) => {
+//     console.log("Data received", clientData);
+//   });
+// });
