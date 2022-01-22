@@ -217,3 +217,84 @@
 //     console.log("Data received", clientData);
 //   });
 // });
+
+// Async await
+
+// const delay = (ms) => {
+//   return new Promise((r) =>
+//     setTimeout(() => {
+//       r();
+//     }, ms)
+//   );
+// };
+
+// const url = "https://jsonplaceholder.typicode.com/todos";
+
+// async function fetchTodos() {
+//   try {
+//     await delay(2000);
+//     const response = await fetch(url);
+//     const data = await response.json();
+//     console.log(data);
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }
+// fetchTodos();
+
+//Fetch, XHR, Ajax
+// const url = "https://jsonplaceholder.typicode.com/users";
+
+// // function sendRequest(method, url, body = null) {
+// //   return new Promise((resolve, reject) => {
+// //     const xhr = new XMLHttpRequest();
+
+// //     xhr.open(method, url);
+// //     xhr.responseType = "json";
+// //     xhr.setRequestHeader("Content-Type", "applicatio-json");
+
+// //     xhr.onload = () => {
+// //       if (xhr.status >= 400) {
+// //         resolve(xhr.response);
+// //       } else {
+// //         reject(xhr.response);
+// //       }
+// //     };
+
+// //     xhr.onerror = () => {
+// //       reject(xhr.response);
+// //     };
+
+// //     xhr.send(JSON.stringify(body));
+// //   });
+// // }
+// function sendRequest(method, url, body = null) {
+//   const headers = {
+//     "Content-Type": "application/json",
+//   };
+//   return fetch(url, {
+//     method: method,
+//     body: JSON.stringify(body),
+//     headers: headers,
+//   }).then((response) => {
+//     if (response.ok) {
+//       return response.json();
+//     }
+//     return response.json().then((err) => {
+//       const e = new Error("error");
+//       e.data = error;
+//       throw e;
+//     });
+//   });
+// }
+
+// // sendRequest("GET", url)
+// //   .then((data) => console.log(data))
+// //   .catch((err) => console.log(err));
+
+// sendRequest("POST", url, {
+//   name: "Bob",
+//   age: 1,
+// })
+//   .then((data) => console.log(data))
+//   .catch((err) => console.log(err));
