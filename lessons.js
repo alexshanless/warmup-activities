@@ -298,3 +298,58 @@
 // })
 //   .then((data) => console.log(data))
 //   .catch((err) => console.log(err));
+
+// //Destruct
+
+// function calcValues(a, b) {
+//   return [a + b, a - b];
+// }
+
+//Proxy
+
+// const person = {
+//   name: "Bob",
+//   age: 24,
+//   job: "NPC",
+// };
+
+// const op = new Proxy(person, {
+//   get(target, prop) {
+//     return target[prop];
+//   },
+//   set(target, prop, value) {
+//     if (prop in target) {
+//       target[prop] = value;
+//     } else {
+//       throw new Error(`No ${prop} field in target`);
+//     }
+//   },
+//   has(target, prop) {
+//     return ["age", "name", "job"].includes(prop);
+//   },
+//   deleteProperty(target, prop) {
+//     console.log("Deleting...", prop);
+//     delete target[prop];
+//   },
+// });
+
+// const log = (text) => `Log: ${text}`;
+
+// const fp = new Proxy(log, {
+//   apply(target, thisArg, args) {
+//     return target.apply(thisArg, args).toUpperCase();
+//   },
+// });
+
+// class Person {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age;
+//   }
+// }
+
+// const PersonProxy = new Proxy(Person, {
+//   construct(target, args) {
+//     return new target(...args);
+//   },
+// });
