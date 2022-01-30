@@ -353,3 +353,50 @@
 //     return new target(...args);
 //   },
 // });
+
+//MAP, SET, WeakMap, Set
+// const entries = [
+//   ["name", "Alex"],
+//   ["age", 29],
+//   ["job", "Fullstack"],
+// ];
+
+// // console.log(Object.entries(obj));
+// // console.log(Object.fromEntries(entries));
+
+// const map = new Map(entries);
+
+// // console.log(map.get("job"));
+
+// // for (let [key, value] of map) {
+// //   console.log(key, value);
+// // }
+
+// const users = [{ name: "Gru" }, { name: "Bru" }, { name: "Wru" }];
+
+// const visits = new Map();
+
+// visits
+//   .set(users[0], new Date())
+//   .set(users[1], new Date(new Date().getTime() + 1000 * 60))
+//   .set(users[2], new Date(new Date().getTime() + 5000 * 60));
+
+// function lastVisit(user) {
+//   return visits.get(user);
+// }
+
+// const set = new Set([1, 2, 3, 3, 4, 5, 5, 5, 6]);
+
+// // console.log(set.keys());
+
+// function uniqValues(array) {
+//   return [...new Set(array)];
+// }
+
+// console.log(uniqValues([1, 1, 1, 2, 2, 2]));
+
+// let obj = { name: "weakmap" };
+
+// const map = new WeakMap([[obj, "obj data"]]);
+
+//get set delete has - All methods of WeakMap
